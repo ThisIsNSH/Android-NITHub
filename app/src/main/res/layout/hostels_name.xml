@@ -1,0 +1,506 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    tools:context="com.travis.myapplication.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#212121">
+
+            <TextView
+                android:id="@+id/t_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:fontFamily="@font/psb"
+                android:text="Welcome"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/t_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t_1"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="8dp"
+                android:clickable="false"
+                android:fontFamily="@font/ps"
+                android:text="To Hostels"
+                android:textAllCaps="true"
+                android:textColor="#64ffda"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/r_1"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/t_2"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/k_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="K"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/k_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Kailash Boys Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/h_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="H"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/h_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Himgiri Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r_3"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/r_1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/m_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="H"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/m_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Himadri Boys Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/me_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="M"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/me_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Mega Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r_5"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/r_3"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/s_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="S"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/s_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Satpura Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/ma_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="M"
+                        android:textColor="#69f0ae"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/ma_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Manimahesh Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r_7"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/r_5"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/v_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="V"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/v_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:gravity="center_horizontal"
+                        android:text="Vidyanchal Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/Sh_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="S"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/sh_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Shivalik Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r_9"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/r_7"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/a_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="A"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/a_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Ambika Girls Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="P"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/p_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Parvati Girls Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r_11"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@id/r_9"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/d_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="D"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/d_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Dauladhar Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                    <TextView
+                        android:id="@+id/n_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="N"
+                        android:textColor="#64ffda"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/n_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:clickable="false"
+                        android:fontFamily="@font/psb"
+                        android:text="Neelkanth Hostel"
+                        android:textAllCaps="true"
+                        android:textColor="#ffffff" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
