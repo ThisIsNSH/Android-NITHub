@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#212121"
+    android:orientation="vertical"
+    tools:context="com.travis.myapplication.AttendanceActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/psb"
+                android:text="Classes"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/ps"
+                android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textColor="#fff" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/class1"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image1_class"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title1_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image1_class"
+                            android:fontFamily="@font/psb"
+                            android:text="CSE"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title1_class"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image1_class"
+                            android:fontFamily="@font/ps"
+                            android:text="Room: G1"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/class2"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image2_class"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title2_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image2_class"
+                            android:fontFamily="@font/psb"
+                            android:text="CSE DUAL"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title2_class"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image2_class"
+                            android:fontFamily="@font/ps"
+                            android:text="Room: G2"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/class3"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image3_class"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title3_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image3_class"
+                            android:fontFamily="@font/psb"
+                            android:text="ECE"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title3_class"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image3_class"
+                            android:fontFamily="@font/ps"
+                            android:text="Room: G1"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/class6"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image6_class"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title6_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image6_class"
+                            android:fontFamily="@font/psb"
+                            android:text="EEE"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title6_class"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image6_class"
+                            android:fontFamily="@font/ps"
+                            android:text="Room: G1"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/class4"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image4_class"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title4_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image4_class"
+                            android:fontFamily="@font/psb"
+                            android:text="ECE DUAL"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title4_class"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image4_class"
+                            android:fontFamily="@font/ps"
+                            android:text="Room: G1"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/class5"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image5_class"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title5_class"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image5_class"
+                            android:fontFamily="@font/psb"
+                            android:text="CIVIL"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title5_class"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image5_class"
+                            android:fontFamily="@font/ps"
+                            android:text="Room: G1"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/psb"
+                android:text="Teachers"
+                android:textColor="#fff"
+                android:textSize="25sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:fontFamily="@font/ps"
+                android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textColor="#fff" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="250dp"
+                        android:id="@+id/teacher1"
+                        android:clickable="true"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image1_hostel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title1_hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image1_hostel"
+                            android:fontFamily="@font/psb"
+                            android:text="Aastha\nModgil"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/teacher2"
+                        android:clickable="true"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image2_hostel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title2_hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image2_hostel"
+                            android:fontFamily="@font/psb"
+                            android:text="Ajit\nSingh"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/teacher3"
+                        android:clickable="true"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image3_hostel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title3_hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image3_hostel"
+                            android:fontFamily="@font/psb"
+                            android:text="Jaibir\nKharb"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/teacher6"
+                        android:clickable="true"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image6_hostel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title6_hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image6_hostel"
+                            android:fontFamily="@font/psb"
+                            android:text="Azad\nSingh"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/teacher4"
+                        android:clickable="true"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image4_hostel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title4_hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image4_hostel"
+                            android:fontFamily="@font/psb"
+                            android:text="Rajesh\nSharma"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/teacher5"
+                        android:clickable="true"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:background="#1b1b1b"
+                        android:elevation="4dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/image5_hostel"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="8dp"
+                            android:src="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/title5_hostel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_toRightOf="@id/image5_hostel"
+                            android:fontFamily="@font/psb"
+                            android:text="Meetu\nMandal"
+                            android:textColor="#fff"
+                            android:textSize="25sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Attendance"
+                android:id="@+id/mark"
+                android:backgroundTint="#eeff41"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
