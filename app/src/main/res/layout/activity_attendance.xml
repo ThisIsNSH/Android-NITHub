@@ -5,8 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
+    style="@style/AppTheme1"
     android:orientation="vertical"
-    tools:context="com.travis.myapplication.AttendanceActivity">
+    tools:context=".AttendanceActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/HeaderBar"
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:text="Attendance"
+            android:textColor="@color/amber"
+            android:fontFamily="@font/psb"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,6 +42,7 @@
                 android:layout_margin="16dp"
                 android:fontFamily="@font/psb"
                 android:text="Classes"
+                android:textAllCaps="true"
                 android:textColor="#fff"
                 android:textSize="25sp" />
 
@@ -79,6 +98,8 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:id="@+id/room1_class"
+                            android:textAllCaps="true"
                             android:layout_below="@id/title1_class"
                             android:layout_marginLeft="8dp"
                             android:layout_toRightOf="@id/image1_class"
@@ -123,6 +144,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title2_class"
                             android:layout_marginLeft="8dp"
+                            android:id="@+id/room2_class"
                             android:layout_toRightOf="@id/image2_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G2"
@@ -165,6 +187,7 @@
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title3_class"
                             android:layout_marginLeft="8dp"
+                            android:id="@+id/room3_class"
                             android:layout_toRightOf="@id/image3_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
@@ -209,6 +232,7 @@
                             android:layout_toRightOf="@id/image6_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
+                            android:id="@+id/room6_class"
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
@@ -251,6 +275,7 @@
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
                             android:textColor="#fff"
+                            android:id="@+id/room4_class"
                             android:textSize="20sp" />
 
 
@@ -291,6 +316,7 @@
                             android:layout_toRightOf="@id/image5_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
+                            android:id="@+id/room5_class"
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
@@ -308,6 +334,7 @@
                 android:layout_margin="16dp"
                 android:fontFamily="@font/psb"
                 android:text="Teachers"
+                android:textAllCaps="true"
                 android:textColor="#fff"
                 android:textSize="25sp" />
 
@@ -353,6 +380,7 @@
                             android:id="@+id/title1_hostel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAllCaps="true"
                             android:layout_margin="8dp"
                             android:layout_toRightOf="@id/image1_hostel"
                             android:fontFamily="@font/psb"
@@ -526,7 +554,9 @@
                 android:layout_height="wrap_content"
                 android:text="Mark Attendance"
                 android:id="@+id/mark"
-                android:backgroundTint="#eeff41"/>
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/psb"
+                android:backgroundTint="#fff"/>
 
         </LinearLayout>
     </ScrollView>
