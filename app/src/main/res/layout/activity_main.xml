@@ -1,53 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:background="#121212">
+<android.support.v7.widget.Toolbar
+    android:id="@+id/my_toolbar"
+
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    style="@style/HeaderBar"
+
+    android:elevation="4dp">
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:textColor="#fff"
+        android:layout_height="wrap_content"
+        android:text="NITH"
+        android:fontFamily="@font/psb"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hub"
+        android:textColor="#f57c00"
+        android:fontFamily="@font/ps"
+        android:textAllCaps="true"
+        android:textSize="25sp"
+        android:gravity="center"/>
+</android.support.v7.widget.Toolbar>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="500dp"
+    android:layout_gravity="center"
     tools:context="com.travis.myapplication.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="3"
-                android:background="#212121"
-                >
+                android:layout_weight="2"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:id="@+id/attendance_activity"
+                android:background="@drawable/attendance_back">
 
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="ATT ENDAN CE"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginRight="0dp"
+                    android:textSize="60sp"
+                    android:fontFamily="@font/psb"
+                    android:textColor="@color/textcolor"/>
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
+                android:clickable="true"
+                android:id="@+id/hostel_activity"
                 android:layout_weight="1"
-                android:background="@color/colorAccent"
-                >
-
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#000"
-                >
-
-
+                android:layout_margin="8dp"
+                android:background="@drawable/hostel_back">
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:text="HOSTEL"
+                    android:layout_margin="8dp"
+                    android:textSize="55sp"
+                    android:fontFamily="@font/psb"
+                    android:textColor="@color/colorAccent"/>
 
             </RelativeLayout>
 
@@ -55,32 +93,48 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:background="#000"
-                >
+                android:id="@+id/chat_activity"
+                android:clickable="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/chat_back">
 
-
-
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:text="CHAT"
+                    android:layout_marginLeft="9dp"
+                    android:textSize="55sp"
+                    android:fontFamily="@font/psb"
+                    android:textColor="@color/darkBlue"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:background="@color/colorPrimary"
-                >
-
-
+                android:clickable="true"
+                android:id="@+id/live_activity"
+                android:layout_margin="8dp"
+                android:background="@drawable/live_back">
+                <TextView
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:text="LIVE FEED"
+                    android:layout_margin="9dp"
+                    android:textSize="60sp"
+                    android:fontFamily="@font/psb"
+                    android:textColor="@color/colorPrimary"/>
 
             </RelativeLayout>
 
@@ -88,4 +142,5 @@
 
 
     </LinearLayout>
+</LinearLayout>
 </LinearLayout>
