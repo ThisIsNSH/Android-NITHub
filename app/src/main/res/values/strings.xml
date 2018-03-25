@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
     <string name="like"><u>Like</u></string>
     <string name="comment">Comment</string>
     <string name="share">Share</string>
