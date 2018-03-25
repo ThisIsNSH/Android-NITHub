@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/HeaderBar"
+
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+
+            android:layout_height="wrap_content"
+            android:text="NITH"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/psb"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/ps"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,10 +39,12 @@
     android:orientation="vertical"
     android:background="@color/background"
     android:gravity="center">
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="welcome"
         android:textSize="30dp"
         android:gravity="center"
         android:textColor="@color/textcolor"
@@ -55,8 +90,9 @@ android:textColorHint="#fff"
         android:layout_height="wrap_content"
         android:text="Login"
         android:id="@+id/loginButton"
-        android:background="@color/background"
-        android:textColor="#76FF03"
+        android:backgroundTint="@color/textcolor"
+        android:textColor="#000"
+        android:textSize="20dp"
         android:fontFamily="@font/psb"
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
@@ -69,9 +105,10 @@ android:textColorHint="#fff"
         android:textSize="20dp"
         android:gravity="center"
         android:id="@+id/register"
-        android:fontFamily="@font/psb"
-        android:textStyle="bold"
-        android:textColor="#76FF03"
+        android:fontFamily="@font/psi"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:textColor="#fff"
         />
 
+</LinearLayout>
 </LinearLayout>

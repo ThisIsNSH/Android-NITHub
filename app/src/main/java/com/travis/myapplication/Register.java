@@ -1,4 +1,4 @@
-package com.chatapp.android.androidchatapp;
+package com.travis.myapplication;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -40,7 +40,7 @@ public class Register extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Register.this, com.chatapp.android.androidchatapp.Login.class));
+                startActivity(new Intent(Register.this, com.travis.myapplication.Login.class));
             }
         });
 

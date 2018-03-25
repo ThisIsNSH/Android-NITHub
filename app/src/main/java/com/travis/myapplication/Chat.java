@@ -1,4 +1,4 @@
-package com.chatapp.android.androidchatapp;
+package com.travis.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +16,7 @@ import com.firebase.client.ChildEventListener;
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
+import com.travis.myapplication.R;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,8 +37,8 @@ public class Chat extends AppCompatActivity {
         messageArea = (EditText)findViewById(R.id.messageArea);
         scrollView = (ScrollView)findViewById(R.id.scrollView);
         Firebase.setAndroidContext(this);
-        reference1 = new Firebase("https://androidchatapp-76776.firebaseio.com/messages/" + com.chatapp.android.androidchatapp.UserDetails.username + "_" + com.chatapp.android.androidchatapp.UserDetails.chatWith);
-        reference2 = new Firebase("https://androidchatapp-76776.firebaseio.com/messages/" + com.chatapp.android.androidchatapp.UserDetails.chatWith + "_" + com.chatapp.android.androidchatapp.UserDetails.username);
+        reference1 = new Firebase("https://androidchatapp-76776.firebaseio.com/messages/" + com.travis.myapplication.UserDetails.username + "_" + com.travis.myapplication.UserDetails.chatWith);
+        reference2 = new Firebase("https://androidchatapp-76776.firebaseio.com/messages/" + com.travis.myapplication.UserDetails.chatWith + "_" + com.travis.myapplication.UserDetails.username);
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +46,7 @@ public class Chat extends AppCompatActivity {
                 if(!messageText.equals("")){
                     Map<String, String> map = new HashMap<String, String>();
                     map.put("message", messageText);
-                    map.put("user", com.chatapp.android.androidchatapp.UserDetails.username);
+                    map.put("user", com.travis.myapplication.UserDetails.username);
                     reference1.push().setValue(map);
                     reference2.push().setValue(map);
                     messageArea.setText("");
@@ -60,11 +61,11 @@ public class Chat extends AppCompatActivity {
                 String message = map.get("message").toString();
                 String userName = map.get("user").toString();
 
-                if(userName.equals(com.chatapp.android.androidchatapp.UserDetails.username)){
+                if(userName.equals(com.travis.myapplication.UserDetails.username)){
                     addMessageBox("You:\n" + message, 1);
                 }
                 else{
-                    addMessageBox(com.chatapp.android.androidchatapp.UserDetails.chatWith + ":\n" + message, 2);
+                    addMessageBox(com.travis.myapplication.UserDetails.chatWith + ":\n" + message, 2);
                 }
             }
             @Override
@@ -92,17 +93,18 @@ public class Chat extends AppCompatActivity {
     public void addMessageBox(String message, int type){
         TextView textView = new TextView(Chat.this);
         textView.setText(message);
-        textView.setPadding(4,4,4,4);
+        textView.setTextColor(getResources().getColor(R.color.black));
+        textView.setPadding(16,4,16,4);
         LinearLayout.LayoutParams lp2 = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp2.weight = 1.0f;
         lp2.setMargins(16,16,16,16);
         if(type == 1) {
             lp2.gravity = Gravity.RIGHT;
-            textView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+            textView.setBackground(getResources().getDrawable(R.drawable.youchat));
         }
         else{
             lp2.gravity = Gravity.LEFT;
-            textView.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+            textView.setBackground(getResources().getDrawable(R.drawable.youchat1));
 
         }
         textView.setLayoutParams(lp2);

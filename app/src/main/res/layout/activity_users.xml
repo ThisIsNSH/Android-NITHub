@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/HeaderBar"
+
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+
+            android:layout_height="wrap_content"
+            android:text="chat"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/psb"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:text="users"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/ps"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -21,4 +53,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/usersList"
         />
+</LinearLayout>
 </LinearLayout>

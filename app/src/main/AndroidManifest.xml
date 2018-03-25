@@ -25,6 +25,12 @@
 
 
         </activity>
+        <activity android:name=".Login">
+
+        </activity>
+        <activity android:name=".Chat"/>
+        <activity android:name=".Register"/>
+        <activity android:name=".Users"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".AttendanceActivity"/>
         <activity android:name=".floors" android:theme="@style/AppTheme1"/>

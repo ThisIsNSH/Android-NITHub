@@ -11,21 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textColorHint="#fff"
-        android:textColor="#fff"
+        android:textColorHint="#000"
+        android:textColor="#000"
         android:hint="Write a message..."
         android:id="@+id/messageArea"
         android:maxHeight="80dp"
-        android:layout_marginLeft="8dp"
-        android:backgroundTint="#fff"
-        android:fontFamily="ps"
+        android:layout_margin="4dp"
+        android:padding="8dp"
+        android:background="@drawable/editback"
+        android:fontFamily="@font/ps"
+
         />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="4"
+        android:layout_weight="6"
         android:padding="4dp"
+        android:layout_marginBottom="8dp"
         android:src="@android:drawable/ic_menu_send"
         android:id="@+id/sendButton"
         />
