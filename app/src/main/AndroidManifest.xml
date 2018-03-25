@@ -16,17 +16,17 @@
         tools:replace="android:allowBackup">
         <activity android:name=".blocks"/>
         <activity android:name=".announce">
-
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
         </activity>
         <activity android:name=".hostels_name">
 
 
         </activity>
         <activity android:name=".Login">
-        <intent-filter>
-            <category android:name="android.intent.category.LAUNCHER"/>
-            <action android:name="android.intent.action.MAIN"/>
-        </intent-filter>
+
         </activity>
         <activity android:name=".Chat"/>
         <activity android:name=".Register"/>

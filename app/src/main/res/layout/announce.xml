@@ -16,7 +16,7 @@
             android:layout_marginRight="16dp"
 
             android:layout_height="wrap_content"
-            android:text="Hostel"
+            android:text="nith"
             android:textColor="#76ff06"
             android:fontFamily="@font/psb"
             android:textAllCaps="true"

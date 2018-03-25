@@ -19,8 +19,8 @@
             android:layout_width="wrap_content"
             android:text="@string/name"
             android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:fontFamily="psb"
+            android:textSize="16dp"
+            android:fontFamily="@font/psb"
             android:textColor="@color/black"
             />
 
@@ -29,9 +29,10 @@
             android:layout_width="wrap_content"
             android:text="@string/sur_name"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
+            android:textSize="16sp"
+            android:layout_marginLeft="8dp"
             android:layout_toRightOf="@+id/name"
-            android:fontFamily="ps"
+            android:fontFamily="@font/ps"
             android:textColor="@color/black"
             />
         <TextView
@@ -40,10 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:layout_marginRight="16dp"
             android:layout_below="@id/name"
-            android:textColor="#fff"
-            android:fontFamily="ps"
+            android:textColor="#000"
+            android:fontFamily="@font/ps"
             />
 
 
