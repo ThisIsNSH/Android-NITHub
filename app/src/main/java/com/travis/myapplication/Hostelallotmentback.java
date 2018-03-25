@@ -1,4 +1,4 @@
-package com.travis.android.hostel;
+package com.travis.myapplication;
 
 import android.content.Context;
 import android.support.constraint.solver.widgets.Snapshot;
@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -18,14 +19,34 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class Hostelallotmentback extends AppCompatActivity {
     public String rollno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.floors);
+        final ImageView imageView = findViewById(R.id.floormap);
+        findViewById(R.id.floor_1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.floor_1));
+            }
+        });
 
+        findViewById(R.id.floor_2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.floor_2));
+            }
+        });
+
+        findViewById(R.id.floor_3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.floor_3));
+            }
+        });
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

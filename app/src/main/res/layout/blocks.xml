@@ -42,18 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/t_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-android:layout_gravity="center"
-            android:clickable="false"
-            android:fontFamily="@font/ps"
-            android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-            android:textAllCaps="true"
-            android:textColor="#fff"
-            android:textSize="16sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,6 +86,7 @@ android:layout_gravity="center"
                 android:layout_height="160dp"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"
+                android:background="#1b1b1b"
 
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackgroundBorderless">
@@ -167,6 +157,8 @@ android:layout_gravity="center"
                 android:layout_marginRight="16dp"
                 android:layout_weight="1"
                 android:clickable="true"
+                android:background="#1b1b1b"
+
                 android:foreground="?attr/selectableItemBackgroundBorderless">
 
                 <TextView
@@ -202,6 +194,8 @@ android:layout_gravity="center"
                 android:layout_height="160dp"
                 android:layout_marginLeft="16dp"
                 android:clickable="true"
+                android:background="#1b1b1b"
+
                 android:layout_weight="1"
                 android:foreground="?attr/selectableItemBackgroundBorderless">
 

@@ -16,4 +16,20 @@
     <style name="HeaderBar">
         <item name="android:background">#000000</item>
     </style>
+    <style name="SelectableItemBackground1">
+        <item name="android:colorControlHighlight">@color/textcolor</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <style name="SelectableItemBackground2">
+        <item name="android:colorControlHighlight">@color/darkBlue</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <style name="SelectableItemBackground3">
+        <item name="android:colorControlHighlight">@color/colorAccent</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+    <style name="SelectableItemBackground4">
+        <item name="android:colorControlHighlight">@color/amber</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
 </resources>

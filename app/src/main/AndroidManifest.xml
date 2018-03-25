@@ -37,7 +37,6 @@
         <activity android:name=".AttendanceActivity">
 
         </activity>
-        <activity android:name=".floors" android:theme="@style/AppTheme1"/>
     </application>
 
 </manifest>
