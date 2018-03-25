@@ -3,27 +3,71 @@
     android:layout_width="match_parent"
     android:background="@color/background"
     android:layout_height="match_parent"
-    tools:context=".announce"
-    >
+    tools:context=".announce">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/HeaderBar"
+
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+
+            android:layout_height="wrap_content"
+            android:text="Hostel"
+            android:textColor="#76ff06"
+            android:fontFamily="@font/psb"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:text="live"
+            android:textColor="#76ff06"
+            android:fontFamily="@font/ps"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+
+
+
     <EditText
         android:id="@+id/nameEditText"
-        android:hint="@string/name"
+        android:hint="Name "
+        android:layout_below="@id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_margin="16dp"
+
+android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:textColor="#fff"
+        android:fontFamily="@font/psb"
         android:textColorHint="#fff"
         android:backgroundTint="#fff"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/psi"
+        android:layout_centerHorizontal="true"
+        android:text="Or you can go anonymous"
+        android:textColor="#fff"
+        android:id="@+id/hint"
+        android:layout_below="@id/nameEditText"/>
 
     <EditText
         android:id="@+id/surNameEditText"
-        android:hint="@string/sur_name"
+        android:hint="Branch Name"
+        android:fontFamily="@font/psb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nameEditText"
+        android:layout_below="@id/hint"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
@@ -35,24 +79,24 @@
     <Button
         android:id="@+id/postFeedButton"
         android:layout_width="wrap_content"
-        android:background="@color/background"
         android:layout_marginBottom="8dp"
         android:layout_centerHorizontal="true"
-        android:text="@string/newsfeed"
-        android:textColor="#76ff06"
+        android:text="add feed"
+        android:backgroundTint="#76ff06"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_below="@id/surNameEditText"
         android:textStyle="bold"
         />
     <View
-        android:background="#fff"
+        android:background="#121212"
         android:layout_width="match_parent"
         android:layout_below="@id/postFeedButton"
         android:layout_height="1dp"
         android:id="@+id/baseline"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        ></View>
+        android:layout_marginRight="16dp"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cardList"
         android:layout_below="@+id/baseline"

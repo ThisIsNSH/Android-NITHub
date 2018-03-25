@@ -10,7 +10,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.travis.myapplication.Classes.ContactInfo;
-import androidstudioexamples.facebookfeed.R;
+import com.travis.myapplication.R;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ContactViewHolder> {
     private List<ContactInfo> contactList;

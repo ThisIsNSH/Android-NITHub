@@ -15,12 +15,15 @@
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
         <activity android:name=".blocks"/>
-        <activity android:name=".hostels_name">
-
+        <activity android:name=".announce">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".hostels_name">
+
+
         </activity>
         <activity android:name=".MainActivity"/>
         <activity android:name=".AttendanceActivity"/>

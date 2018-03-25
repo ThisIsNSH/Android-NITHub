@@ -1,5 +1,6 @@
 package com.travis.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 
 import java.util.Calendar;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,15 +44,15 @@ public class announce extends AppCompatActivity implements Button.OnClickListene
         calendar = Calendar.getInstance();
 
         //Set the onclick listener for the 'post feed' button
-        feedButton = (Button) findViewById(R.id.postFeedButton);
-        feedButton.setOnClickListener(this);
+        //feedButton = (Button) findViewById(R.id.postFeedButton);
+        //feedButton.setOnClickListener(this);
 
         //Declares the view for your feed
         ContactInfo contactInfo = new ContactInfo();
 
         //Set the layout and the RecyclerView
         recList = (RecyclerView) findViewById(R.id.cardList);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        LinearLayoutManager llm = new LinearLayoutManager(announce.this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recList.setLayoutManager(llm);
         ca = new ContactAdapter(list);
@@ -61,7 +63,7 @@ public class announce extends AppCompatActivity implements Button.OnClickListene
 
     //Method to open the dialog to post a feed
     private void openDialog(){
-        LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
+        LayoutInflater inflater = LayoutInflater.from(announce.this);
         View subView = inflater.inflate(R.layout.dialog_layout, null);
         subEditText = (EditText)subView.findViewById(R.id.dialogEditText);
         surNameText = (EditText)findViewById(R.id.surNameEditText);
