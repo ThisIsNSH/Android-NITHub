@@ -28,12 +28,14 @@
         <activity android:name=".Chat"/>
         <activity android:name=".Register"/>
         <activity android:name=".Users"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".AttendanceActivity">
+        <activity android:name=".MainActivity">
         <intent-filter>
             <category android:name="android.intent.category.LAUNCHER"/>
             <action android:name="android.intent.action.MAIN"/>
         </intent-filter>
+        </activity>
+        <activity android:name=".AttendanceActivity">
+
         </activity>
         <activity android:name=".floors" android:theme="@style/AppTheme1"/>
     </application>
