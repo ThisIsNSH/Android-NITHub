@@ -4,13 +4,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
+
+import com.firebase.client.DataSnapshot;
+import com.firebase.client.ValueEventListener;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.kairos.*;
 import org.json.JSONException;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import android.Manifest;
@@ -35,6 +43,7 @@ import static android.content.ContentValues.TAG;
 
 public class AttendanceActivity extends AppCompatActivity {
 
+    String image1,image2,image3,image4,image5;
     int class_selected=0;
     int class_id;
     int teacher_selected=0;
@@ -55,7 +64,8 @@ public class AttendanceActivity extends AppCompatActivity {
     public static final int MEDIA_TYPE_IMAGE = 1;
     public static final int MEDIA_TYPE_VIDEO = 2;
     private static final String IMAGE_DIRECTORY_NAME = "Hello Camera";
-    private Uri fileUri; // file url to store image/video
+    private Uri fileUri;
+    EditText roll;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,11 +101,10 @@ public class AttendanceActivity extends AppCompatActivity {
         final RelativeLayout teacher4 = findViewById(R.id.teacher4);
         final RelativeLayout teacher5 = findViewById(R.id.teacher5);
         final RelativeLayout teacher6 = findViewById(R.id.teacher6);
+        roll = findViewById(R.id.enter_roll);
 
         Toolbar mTopToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(mTopToolbar);
-
-
         class1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -268,7 +277,6 @@ public class AttendanceActivity extends AppCompatActivity {
         String app_id = "2ea9db6c";
         String api_key = "f9269c59b261f7d5a4c4c874c58130e2";
         myKairos.setAuthentication(this, app_id, api_key);
-
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     == PackageManager.PERMISSION_GRANTED) {
@@ -282,10 +290,6 @@ public class AttendanceActivity extends AppCompatActivity {
         else { //permission is automatically granted on sdk<23 upon installation
             Log.v(TAG,"Permission is granted");
         }
-
-
-
-
         KairosListener listener1 = new KairosListener() {
 
             @Override
@@ -300,88 +304,115 @@ public class AttendanceActivity extends AppCompatActivity {
                 Log.d("KAIROS en fa DEMO", response);
             }
         };
+
+        final DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        final String rollno = roll.getText().toString();
+        final DatabaseReference url1 = ref.child("androidchatapp-59bff").child("attendance").child(rollno).child("string1");
+        final DatabaseReference url2 = ref.child("androidchatapp-59bff").child("attendance").child(rollno).child("string2");
+        final DatabaseReference url3 = ref.child("androidchatapp-59bff").child("attendance").child(rollno).child("string3");
+        final DatabaseReference url4 = ref.child("androidchatapp-59bff").child("attendance").child(rollno).child("string4");
+        final DatabaseReference url5 = ref.child("androidchatapp-59bff").child("attendance").child(rollno).child("string5");
+
+
+        url1.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+            @Override
+            public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                image1 = dataSnapshot.getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        url2.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+            @Override
+            public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                image2 = dataSnapshot.getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        url3.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+            @Override
+            public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                image3 = dataSnapshot.getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        url4.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+            @Override
+            public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                image4 = dataSnapshot.getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        url5.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+            @Override
+            public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+                image5 = dataSnapshot.getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         try {
-            String image1 = "https://upload.wikimedia.org/wikipedia/commons/2/2e/Akshay_Kumar.jpg";
-            String image2 = "http://www.bollywoodlife.com/wp-content/uploads/2017/08/Akshay-Kumar-4.jpg";
-            String image3 = "https://cdn.pinkvilla.com/files/styles/contentpreview/public/Post-Toilet-–-Ek-Prem-Katha-is-Akshay-Kumar-the-new-darling-of-the-distributors.jpg";
-            String image4 = "http://static.dnaindia.com/sites/default/files/styles/full/public/2017/09/14/609446-akshay-kumar-091517.jpg";
-            String image5 = "https://akm-img-a-in.tosshub.com/indiatoday/akshay-kumar-story_647_120617125746.jpg";
             String subjectId1 = "gElizabeth";
             String subjectId2 = "fElizabeth";
             String subjectId3 = "dElizabeth";
             String subjectId4 = "sElizabeth";
             String subjectId5 = "aElizabeth";
-
             myKairos.enroll(image1, subjectId1, galleryId, null, null, null, listener1);
             myKairos.enroll(image2, subjectId2, galleryId, null, null, null, listener1);
             myKairos.enroll(image3, subjectId3, galleryId, null, null, null, listener1);
             myKairos.enroll(image4, subjectId4, galleryId, null, null, null, listener1);
             myKairos.enroll(image5, subjectId5, galleryId, null, null, null, listener1);
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
-
-
-
-
-
         permissions.add(ACCESS_FINE_LOCATION);
         permissions.add(ACCESS_COARSE_LOCATION);
-
         permissionsToRequest = findUnAskedPermissions(permissions);
-        //get the permissions we have asked for before but are not granted..
-        //we will store this in a global list to access later.
-
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-
             if (permissionsToRequest.size() > 0)
                 requestPermissions(permissionsToRequest.toArray(new String[permissionsToRequest.size()]), ALL_PERMISSIONS_RESULT);
         }
-
-
         Button btn = (Button) findViewById(R.id.mark);
-
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 captureImage();
-
                 locationTrack = new LocationTrack(AttendanceActivity.this);
-
-
                 if (locationTrack.canGetLocation()) {
-
-
                     double longitude = locationTrack.getLongitude();
                     double latitude = locationTrack.getLatitude();
-
                     Toast.makeText(getApplicationContext(), "Longitude:" + Double.toString(longitude) + "\nLatitude:" + Double.toString(latitude), Toast.LENGTH_SHORT).show();
                 } else {
-
                     locationTrack.showSettingsAlert();
                 }
-
             }
         });
-
-        // Checking camera availability
         if (!isDeviceSupportCamera()) {
             Toast.makeText(getApplicationContext(),
                     "Sorry! Your device doesn't support camera",
                     Toast.LENGTH_LONG).show();
-            // will close the app if the device does't have camera
             finish();
         }
-
-
     }
     private ArrayList<String> findUnAskedPermissions(ArrayList<String> wanted) {
         ArrayList<String> result = new ArrayList<String>();
@@ -391,10 +422,8 @@ public class AttendanceActivity extends AppCompatActivity {
                 result.add(perm);
             }
         }
-
         return result;
     }
-
     private boolean hasPermission(String permission) {
         if (canMakeSmores()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -403,28 +432,20 @@ public class AttendanceActivity extends AppCompatActivity {
         }
         return true;
     }
-
     private boolean canMakeSmores() {
         return (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1);
     }
-
-
     @TargetApi(Build.VERSION_CODES.M)
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-
         switch (requestCode) {
-
             case ALL_PERMISSIONS_RESULT:
                 for (String perms : permissionsToRequest) {
                     if (!hasPermission(perms)) {
                         permissionsRejected.add(perms);
                     }
                 }
-
                 if (permissionsRejected.size() > 0) {
-
-
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         if (shouldShowRequestPermissionRationale(permissionsRejected.get(0))) {
                             showMessageOKCancel("These permissions are mandatory for the application. Please allow access.",
@@ -439,14 +460,10 @@ public class AttendanceActivity extends AppCompatActivity {
                             return;
                         }
                     }
-
                 }
-
                 break;
         }
-
     }
-
     private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
         new android.support.v7.app.AlertDialog.Builder(AttendanceActivity.this)
                 .setMessage(message)
@@ -455,76 +472,39 @@ public class AttendanceActivity extends AppCompatActivity {
                 .create()
                 .show();
     }
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         locationTrack.stopListener();
     }
-
-
-
-    /**
-     * Checking device has camera hardware or not
-     * */
     private boolean isDeviceSupportCamera() {
         if (getApplicationContext().getPackageManager().hasSystemFeature(
                 PackageManager.FEATURE_CAMERA)) {
-            // this device has a camera
             return true;
         } else {
-            // no camera on this device
             return false;
         }
     }
-
-    /**
-     * Capturing Camera Image will lauch camera app requrest image capture
-     */
     private void captureImage() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
         fileUri = getOutputMediaFileUri(MEDIA_TYPE_IMAGE);
-
         intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
-
-        // start the image capture Intent
         startActivityForResult(intent, CAMERA_CAPTURE_IMAGE_REQUEST_CODE);
     }
-
-    /**
-     * Here we store the file url as it will be null after returning from camera
-     * app
-     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
-        // save file url in bundle as it will be null on scren orientation
-        // changes
         outState.putParcelable("file_uri", fileUri);
     }
-
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-
-        // get the file url
         fileUri = savedInstanceState.getParcelable("file_uri");
     }
-
-
-
-    /**
-     * Receiving activity result method will be called after closing the camera
-     * */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // if the result is capturing Image
         if (requestCode == CAMERA_CAPTURE_IMAGE_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                // successfully captured the image
-                // display it in image view
                 previewCapturedImage();
             } else if (resultCode == RESULT_CANCELED) {
                 // user cancelled Image capture
@@ -555,47 +535,62 @@ public class AttendanceActivity extends AppCompatActivity {
             }
         }
     }
-
     private void previewCapturedImage() {
         KairosListener listener = new KairosListener() {
-
             @Override
             public void onSuccess(String response) {
                 if ((response.indexOf("no match found") !=-1? true: false)==true){
-                    Toast.makeText(AttendanceActivity.this, "Didnt Match!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AttendanceActivity.this, "Sorry! Its a proxy", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(AttendanceActivity.this, "Match", Toast.LENGTH_SHORT).show();
+                    final DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                    final String rollno = roll.getText().toString();
+                    final DatabaseReference a = ref.child("record").child(rollno);
+                    a.addListenerForSingleValueEvent(new com.google.firebase.database.ValueEventListener() {
+                        @Override
+                        public void onDataChange(com.google.firebase.database.DataSnapshot dataSnapshot) {
+
+
+                            Date c = Calendar.getInstance().getTime();
+                            String date = c.toString();
+
+
+                            String one = dataSnapshot.getValue(String.class);
+
+
+                                one = one + " " + date;
+                                a.setValue(one);
+
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
+
+                    Toast.makeText(AttendanceActivity.this, "Attendance Marked", Toast.LENGTH_SHORT).show();
                 }
                 Log.d("KAIROS en su DEMO", response);
             }
-
             @Override
             public void onFail(String response) {
-                Toast.makeText(AttendanceActivity.this, "Didnt Match!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AttendanceActivity.this, "Sorry! Its a proxy", Toast.LENGTH_SHORT).show();
             }
         };
         try {
 
             BitmapFactory.Options options = new BitmapFactory.Options();
-
-            // downsizing image as it throws OutOfMemory Exception for larger
-            // images
             options.inSampleSize = 8;
-
             final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
                     options);
-
             myKairos.recognize(bitmap, galleryId, null, null, null, null, listener);
-
         } catch (JSONException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
-
-
     /**
      * ------------ Helper Methods ----------------------
      * */
@@ -606,19 +601,14 @@ public class AttendanceActivity extends AppCompatActivity {
     public Uri getOutputMediaFileUri(int type) {
         return Uri.fromFile(getOutputMediaFile(type));
     }
-
     /**
      * returning image / video
      */
     private static File getOutputMediaFile(int type) {
-
-        // External sdcard location
         File mediaStorageDir = new File(
                 Environment
                         .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES),
                 IMAGE_DIRECTORY_NAME);
-
-        // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
                 Log.d(IMAGE_DIRECTORY_NAME, "Oops! Failed create "
@@ -626,8 +616,6 @@ public class AttendanceActivity extends AppCompatActivity {
                 return null;
             }
         }
-
-        // Create a media file name
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss",
                 Locale.getDefault()).format(new Date());
         File mediaFile;
@@ -640,7 +628,6 @@ public class AttendanceActivity extends AppCompatActivity {
         } else {
             return null;
         }
-
         return mediaFile;
     }
 }
