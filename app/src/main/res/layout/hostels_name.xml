@@ -74,6 +74,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
+                    android:id="@+id/kailash"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
@@ -353,7 +354,7 @@
                         android:gravity="center_horizontal"
                         android:text="Vidyanchal Hostel"
                         android:textAllCaps="true"
-                        android:textColor="@color/black" />
+                        android:textColor="#64ffda" />
                 </RelativeLayout>
 
                 <RelativeLayout
