@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        style="@style/HeaderBar"
+
+        android:elevation="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+
+            android:layout_height="wrap_content"
+            android:text="NITH"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/psb"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:text="register"
+            android:textColor="@color/textcolor"
+            android:fontFamily="@font/ps"
+            android:textAllCaps="true"
+            android:textSize="25sp"
+            android:gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.chatapp.android.androidchatapp.Register"
+    tools:context=".Register"
     android:orientation="vertical"
     android:background="@color/background"
     android:gravity="center">
@@ -57,10 +90,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:background="@color/background"
+        android:backgroundTint="@color/textcolor"
         android:id="@+id/registerButton"
-        android:textColor="#76FF03"
+        android:textColor="#000"
         android:textStyle="bold"
+        android:textSize="20dp"
         android:fontFamily="@font/psb"
         android:layout_marginBottom="16dp"/>
 
@@ -70,10 +104,10 @@
         android:text="Click here to login"
         android:textSize="20dp"
         android:gravity="center"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:id="@+id/login"
-        android:fontFamily="@font/psb"
-        android:textColor="#76FF03"
-        android:textAllCaps="true"
-        android:textStyle="bold"
+        android:fontFamily="@font/psi"
+        android:textColor="#fff"
         />
+</LinearLayout>
 </LinearLayout>

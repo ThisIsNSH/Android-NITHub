@@ -1,4 +1,4 @@
-package com.chatapp.android.androidchatapp;
+package com.travis.myapplication;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -54,8 +54,8 @@ public class Users extends AppCompatActivity {
         usersList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                com.chatapp.android.androidchatapp.UserDetails.chatWith = al.get(position);
-                startActivity(new Intent(Users.this, com.chatapp.android.androidchatapp.Chat.class));
+                com.travis.myapplication.UserDetails.chatWith = al.get(position);
+                startActivity(new Intent(Users.this, com.travis.myapplication.Chat.class));
             }
         });
     }
@@ -70,7 +70,7 @@ public class Users extends AppCompatActivity {
             while(i.hasNext()){
                 key =  i.next().toString();
 
-                if(!key.equals(com.chatapp.android.androidchatapp.UserDetails.username)) {
+                if(!key.equals(com.travis.myapplication.UserDetails.username)) {
                     al.add(key);
                 }
                 totalUsers++;

@@ -1,4 +1,4 @@
-package com.chatapp.android.androidchatapp;
+package com.travis.myapplication;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.travis.myapplication.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -38,7 +39,7 @@ public class Login extends AppCompatActivity {
         registerUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Login.this, com.chatapp.android.androidchatapp.Register.class));
+                startActivity(new Intent(Login.this, com.travis.myapplication.Register.class));
             }
         });
 
@@ -74,9 +75,9 @@ public class Login extends AppCompatActivity {
                                         Toast.makeText(Login.this, "user not found", Toast.LENGTH_LONG).show();
                                     }
                                     else if(obj.getJSONObject(user).getString("password").equals(pass)){
-                                        com.chatapp.android.androidchatapp.UserDetails.username = user;
-                                        com.chatapp.android.androidchatapp.UserDetails.password = pass;
-                                        startActivity(new Intent(Login.this, com.chatapp.android.androidchatapp.Users.class));
+                                        com.travis.myapplication.UserDetails.username = user;
+                                        com.travis.myapplication.UserDetails.password = pass;
+                                        startActivity(new Intent(Login.this, com.travis.myapplication.Users.class));
                                     }
                                     else {
                                         Toast.makeText(Login.this, "incorrect password", Toast.LENGTH_LONG).show();

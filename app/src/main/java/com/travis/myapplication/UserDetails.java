@@ -1,4 +1,4 @@
-package com.chatapp.android.androidchatapp;
+package com.travis.myapplication;
 
 public class UserDetails {
     static String username = "";
