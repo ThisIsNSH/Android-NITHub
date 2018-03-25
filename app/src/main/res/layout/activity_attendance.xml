@@ -2,28 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#212121"
-    style="@style/AppTheme1"
     android:orientation="vertical"
     tools:context=".AttendanceActivity">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
+        style="@style/HeaderBar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        style="@style/HeaderBar"
         android:elevation="4dp">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_marginRight="16dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Attendance"
-            android:textColor="@color/amber"
+            android:layout_marginRight="16dp"
             android:fontFamily="@font/psb"
+            android:gravity="center"
+            android:text="class"
             android:textAllCaps="true"
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:textColor="@color/amber"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/ps"
+            android:gravity="center"
+            android:text="Attendance"
+            android:textAllCaps="true"
+            android:textColor="@color/amber"
+            android:textSize="25sp" />
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -50,6 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
+                android:textAllCaps="true"
                 android:fontFamily="@font/ps"
                 android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 android:textColor="#fff" />
@@ -68,12 +82,12 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/class1"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -96,15 +110,15 @@
                             android:textSize="25sp" />
 
                         <TextView
+                            android:id="@+id/room1_class"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:id="@+id/room1_class"
-                            android:textAllCaps="true"
                             android:layout_below="@id/title1_class"
                             android:layout_marginLeft="8dp"
                             android:layout_toRightOf="@id/image1_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
+                            android:textAllCaps="true"
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
@@ -112,12 +126,12 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/class2"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -140,11 +154,11 @@
                             android:textSize="25sp" />
 
                         <TextView
+                            android:id="@+id/room2_class"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title2_class"
                             android:layout_marginLeft="8dp"
-                            android:id="@+id/room2_class"
                             android:layout_toRightOf="@id/image2_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G2"
@@ -155,12 +169,12 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/class3"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -183,11 +197,11 @@
                             android:textSize="25sp" />
 
                         <TextView
+                            android:id="@+id/room3_class"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title3_class"
                             android:layout_marginLeft="8dp"
-                            android:id="@+id/room3_class"
                             android:layout_toRightOf="@id/image3_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
@@ -198,11 +212,11 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/class6"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -225,6 +239,7 @@
                             android:textSize="25sp" />
 
                         <TextView
+                            android:id="@+id/room6_class"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title6_class"
@@ -232,7 +247,6 @@
                             android:layout_toRightOf="@id/image6_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
-                            android:id="@+id/room6_class"
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
@@ -240,11 +254,11 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/class4"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -267,6 +281,7 @@
                             android:textSize="25sp" />
 
                         <TextView
+                            android:id="@+id/room4_class"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title4_class"
@@ -275,18 +290,17 @@
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
                             android:textColor="#fff"
-                            android:id="@+id/room4_class"
                             android:textSize="20sp" />
 
 
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/class5"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -309,6 +323,7 @@
                             android:textSize="25sp" />
 
                         <TextView
+                            android:id="@+id/room5_class"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/title5_class"
@@ -316,7 +331,6 @@
                             android:layout_toRightOf="@id/image5_class"
                             android:fontFamily="@font/ps"
                             android:text="Room: G1"
-                            android:id="@+id/room5_class"
                             android:textColor="#fff"
                             android:textSize="20sp" />
 
@@ -360,12 +374,12 @@
                     android:orientation="horizontal">
 
                     <RelativeLayout
-                        android:layout_width="250dp"
                         android:id="@+id/teacher1"
-                        android:clickable="true"
+                        android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -380,11 +394,11 @@
                             android:id="@+id/title1_hostel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAllCaps="true"
                             android:layout_margin="8dp"
                             android:layout_toRightOf="@id/image1_hostel"
                             android:fontFamily="@font/psb"
                             android:text="Aastha\nModgil"
+                            android:textAllCaps="true"
                             android:textColor="#fff"
                             android:textSize="25sp" />
 
@@ -393,11 +407,11 @@
 
                     <RelativeLayout
                         android:id="@+id/teacher2"
-                        android:clickable="true"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -424,11 +438,11 @@
 
                     <RelativeLayout
                         android:id="@+id/teacher3"
-                        android:clickable="true"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -455,10 +469,10 @@
 
                     <RelativeLayout
                         android:id="@+id/teacher6"
-                        android:clickable="true"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -485,10 +499,10 @@
 
                     <RelativeLayout
                         android:id="@+id/teacher4"
-                        android:clickable="true"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -515,10 +529,10 @@
 
                     <RelativeLayout
                         android:id="@+id/teacher5"
-                        android:clickable="true"
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:background="#1b1b1b"
+                        android:clickable="true"
                         android:elevation="4dp"
                         android:orientation="vertical">
 
@@ -549,14 +563,14 @@
             </HorizontalScrollView>
 
             <Button
-                android:layout_gravity="center"
+                android:id="@+id/mark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mark Attendance"
-                android:id="@+id/mark"
+                android:layout_gravity="center"
                 android:layout_marginTop="16dp"
+                android:backgroundTint="#fff"
                 android:fontFamily="@font/psb"
-                android:backgroundTint="#fff"/>
+                android:text="Mark Attendance" />
 
         </LinearLayout>
     </ScrollView>
