@@ -22,6 +22,7 @@
             android:layout_marginRight="16dp"
             android:fontFamily="@font/psb"
             android:text="class"
+            android:gravity="left"
             android:textAllCaps="true"
             android:textColor="@color/amber"
             android:textSize="25sp" />
@@ -32,6 +33,7 @@
             android:layout_marginRight="16dp"
             android:fontFamily="@font/ps"
             android:text="Attendance"
+            android:gravity="left"
             android:textAllCaps="true"
             android:textColor="@color/amber"
             android:textSize="25sp" />
@@ -379,7 +381,6 @@
                             android:layout_toRightOf="@id/image1_hostel"
                             android:fontFamily="@font/psb"
                             android:text="Aastha\nModgil"
-                            android:textAllCaps="true"
                             android:textColor="#fff"
                             android:textSize="25sp" />
 

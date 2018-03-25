@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,Login.class));
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Toast.makeText(this, "Do you wanna leave this app!!", Toast.LENGTH_SHORT).show();
 
     }
 }

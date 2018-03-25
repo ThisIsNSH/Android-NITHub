@@ -143,6 +143,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:background="#0b0b0b"
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <TextView
@@ -230,6 +231,8 @@
                     android:layout_marginLeft="16dp"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:background="#0b0b0b"
+
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <TextView
@@ -263,6 +266,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
+                    android:background="#0b0b0b"
+
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
@@ -353,6 +358,8 @@
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:background="#0b0b0b"
+
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <TextView
@@ -430,6 +437,8 @@
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
                     android:clickable="true"
+                    android:background="#0b0b0b"
+
                     android:foreground="?attr/selectableItemBackgroundBorderless">
 
                     <TextView

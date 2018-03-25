@@ -18,7 +18,7 @@ public class blocks extends AppCompatActivity {
         findViewById(R.id.block_a).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(blocks.this,floors.class) );
+                startActivity(new Intent(blocks.this,Hostelallotmentback.class) );
             }
         });
     }
