@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:fontFamily="@font/psb"
-            android:gravity="center"
             android:text="class"
             android:textAllCaps="true"
             android:textColor="@color/amber"
@@ -32,7 +31,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="16dp"
             android:fontFamily="@font/ps"
-            android:gravity="center"
             android:text="Attendance"
             android:textAllCaps="true"
             android:textColor="@color/amber"
@@ -52,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="8dp"
                 android:fontFamily="@font/psb"
                 android:text="Classes"
                 android:textAllCaps="true"
@@ -63,7 +61,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
-                android:textAllCaps="true"
                 android:fontFamily="@font/ps"
                 android:text="blaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 android:textColor="#fff" />
@@ -71,9 +68,9 @@
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+
                 android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:scrollbars="none">
 
                 <LinearLayout
@@ -345,7 +342,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_margin="8dp"
                 android:fontFamily="@font/psb"
                 android:text="Teachers"
                 android:textAllCaps="true"
@@ -363,7 +360,6 @@
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:scrollbars="none">
@@ -562,12 +558,22 @@
 
             </HorizontalScrollView>
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:hint="Enter your Roll"
+                android:fontFamily="@font/ps"
+                android:layout_gravity="center"
+                android:id="@+id/enter_roll"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/mark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
                 android:backgroundTint="#fff"
                 android:fontFamily="@font/psb"
                 android:text="Mark Attendance" />
