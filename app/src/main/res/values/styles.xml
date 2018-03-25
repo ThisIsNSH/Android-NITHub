@@ -12,6 +12,7 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:backgroundDimEnabled">false</item>
+    </style>
     <style name="HeaderBar">
         <item name="android:background">#000000</item>
     </style>
