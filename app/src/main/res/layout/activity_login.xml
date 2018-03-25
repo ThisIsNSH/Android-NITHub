@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    android:gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="@color/textcolor"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:fontFamily="@font/psb"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="enter username"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#fff"
+        android:fontFamily="@font/ps"
+android:textColorHint="#fff"
+        android:backgroundTint="#fff"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:hint="enter password"
+        android:textColorHint="#fff"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#fff"
+        android:fontFamily="@font/ps"
+        android:textColor="#fff"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginButton"
+        android:background="@color/background"
+        android:textColor="#76FF03"
+        android:fontFamily="@font/psb"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click here to register"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:id="@+id/register"
+        android:fontFamily="@font/psb"
+        android:textStyle="bold"
+        android:textColor="#76FF03"
+        />
+
+</LinearLayout>
