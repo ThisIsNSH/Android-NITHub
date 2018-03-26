@@ -87,9 +87,10 @@
                         <ImageView
                             android:id="@+id/image1_class"
                             android:layout_width="100dp"
+                            android:scaleType="centerCrop"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:src="@drawable/cse" />
 
                         <TextView
                             android:id="@+id/title1_class"
@@ -132,8 +133,9 @@
                             android:id="@+id/image2_class"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:scaleType="centerCrop"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:src="@drawable/cse" />
 
                         <TextView
                             android:id="@+id/title2_class"
@@ -176,7 +178,8 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ece" />
 
                         <TextView
                             android:id="@+id/title3_class"
@@ -216,9 +219,10 @@
                         <ImageView
                             android:id="@+id/image6_class"
                             android:layout_width="100dp"
+                            android:scaleType="centerCrop"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:src="@drawable/electrical" />
 
                         <TextView
                             android:id="@+id/title6_class"
@@ -260,7 +264,8 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ece" />
 
                         <TextView
                             android:id="@+id/title4_class"
@@ -302,6 +307,7 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
+                            android:scaleType="centerCrop"
                             android:src="@color/colorPrimary" />
 
                         <TextView
@@ -347,6 +353,7 @@
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
+
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:scrollbars="none">
@@ -370,8 +377,9 @@
                             android:id="@+id/image1_hostel"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:scaleType="centerCrop"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:src="@drawable/aastha" />
 
                         <TextView
                             android:id="@+id/title1_hostel"
@@ -402,7 +410,8 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ajitsir" />
 
                         <TextView
                             android:id="@+id/title2_hostel"
@@ -433,7 +442,8 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/jaibirsir" />
 
                         <TextView
                             android:id="@+id/title3_hostel"
@@ -463,7 +473,8 @@
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_margin="8dp"
-                            android:src="@color/colorPrimary" />
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/himanshusir" />
 
                         <TextView
                             android:id="@+id/title6_hostel"
@@ -472,7 +483,7 @@
                             android:layout_margin="8dp"
                             android:layout_toRightOf="@id/image6_hostel"
                             android:fontFamily="@font/psb"
-                            android:text="Azad\nSingh"
+                            android:text="Himanshu"
                             android:textColor="#fff"
                             android:textSize="25sp" />
 

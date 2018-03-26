@@ -25,7 +25,9 @@
         <activity android:name=".Chat" />
         <activity android:name=".Register" />
         <activity android:name=".Users" />
+        <activity android:name=".Hostelallotmentback"/>
         <activity android:name=".MainActivity">
+
 
         </activity>
         <activity android:name=".AttendanceActivity"></activity>

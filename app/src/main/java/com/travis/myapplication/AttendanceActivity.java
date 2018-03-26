@@ -630,6 +630,7 @@ public class AttendanceActivity extends AppCompatActivity {
         }
         return mediaFile;
     }
+
 }
 
 
